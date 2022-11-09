@@ -29,4 +29,4 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 📱 Layout 
 
-Você pode acessar-lo através desse <a href="https://focus-timer-v1.vercel.app/">Link </a>.
+Você pode acessar-lo através desse <a href="https://focus-timer-v1.vercel.app/" target="_blank">Link </a>.
