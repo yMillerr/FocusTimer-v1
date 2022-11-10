@@ -1,6 +1,5 @@
 export default function Controls({
     minutes,
-    seconds,
     timer,
     displayMinutes,
     sounds,
@@ -9,29 +8,6 @@ export default function Controls({
 
 }){
     let itsPlaying = false
-
-
-    function removeFiveMinutes(){
-        minutes = Number(displayMinutes.textContent) - 5
-
-        if(minutes < 0){
-            minutes = 0
-            alert('Não pode diminuir mais minutos!')
-        }
-
-        timer.displayUpdate(minutes , 0)
-    }
-
-    function addFiveMinutes() { 
-        minutes = Number(displayMinutes.textContent) + 5
-        
-        if(minutes > 90){
-            minutes = 90
-            alert('Você alcançou o limite de minutos')
-        }
-    
-        timer.displayUpdate(minutes , 0)
-    }
     
     function activeAudioAndToggleColor(audio , event){
 
@@ -51,16 +27,45 @@ export default function Controls({
 
         sounds.loop(audio)
     }
+
+    function removeFiveMinutes(){
+        minutes = Number(displayMinutes.textContent) - 5
+
+        if(minutes < 0){
+            minutes = 60
+            alert('Não pode diminuir mais minutos!')
+        }
+
+        timer.displayUpdate(minutes , 0)
+    }
+
+    function addFiveMinutes() { 
+
+        minutes = Number(displayMinutes.textContent) + 5
+        
+        if(minutes > 90){
+            minutes = 90
+            alert('Você alcançou o limite de minutos')
+        }
     
-    function buttonToggle(){
+        timer.displayUpdate(minutes , 0)
+    }
+    
+    function reset(){
+        buttonPlay.classList.remove('hide')
+        buttonPause.classList.add('hide')
+    }
+
+    function playAndPause(){
         buttonPlay.classList.toggle('hide')
         buttonPause.classList.toggle('hide')
     }
 
     return { 
         activeAudioAndToggleColor,
+        reset,
+        playAndPause,
         addFiveMinutes,
-        removeFiveMinutes,
-        buttonToggle
+        removeFiveMinutes
     }
 }

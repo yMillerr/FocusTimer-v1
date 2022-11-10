@@ -13,18 +13,18 @@ export default function Events ({timer,controls,sounds}){
     
     buttonPlay.addEventListener('click', () => {    
         timer.countDown()
-        controls.buttonToggle()
+        controls.playAndPause()
     })
 
     buttonPause.addEventListener('click' , () => {
-        controls.buttonToggle()
+        controls.playAndPause()
         timer.stop()
     })
     
     buttonStop.addEventListener('click' ,() =>{
         timer.reset()
-        buttonPause.classList.add('hide')
-        buttonPlay.classList.remove('hide')
+        controls.reset()
+     
     })
     
     addMinutes.addEventListener('click' , () => {

@@ -2,6 +2,9 @@ export default function Timer({
     displayMinutes,
     displaySeconds,
     minutes,
+    controls,
+    sounds
+
 }){
     let timerTimeOut
     
@@ -13,6 +16,7 @@ export default function Timer({
      
              if(isFinished){
                  reset()
+                 sounds.timeEnd()
                  return
              }
      
@@ -35,6 +39,7 @@ export default function Timer({
 
     function reset(){
         displayUpdate(minutes , 0)
+        controls.reset()
         stop()
     }
 
@@ -47,5 +52,6 @@ export default function Timer({
         displayUpdate,
         countDown,
         stop,
+
     }
 }

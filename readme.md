@@ -23,10 +23,10 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 ## 💻 Projeto
 <br>
-<p>Focus Timer foi desenvolvido com base no método pomodoro.</p><br>
+Focus Timer foi desenvolvido com base no método pomodoro.
 
-<p><strong>Funcionalidades:</strong> Quando acionado os botões de (+) e (-), diminui e adiciona 5 minutos ao timer. Os cartões do lado direito, tocam uma musica relaxante, o contador inicia em 25 minutos e quando acionado o botão de stop retorna para esses mesmo 25 minutos.</p>
+<p><strong>Funcionalidades:</strong> Quando acionado os botões de (+) e (-), diminui e adiciona 5 minutos. Os cartões do lado direito, tocam uma musica relaxante, o contador inicia em 25 minutos e quando acionado o botão de stop retorna para esses mesmo 25 minutos.</p>
 
 ## 📱 Layout 
 
-Você pode acessar-lo através desse <a href="https://focus-timer-v1.vercel.app/" target="_blank">Link </a>.
+Você pode acessar-lo através desse <a href="https://focus-timer-v1.vercel.app/">Link </a>.

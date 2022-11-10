@@ -14,12 +14,10 @@ const coffee = document.querySelector('.coffee')
 const flames = document.querySelector('.flames')
 
 let minutes = displayMinutes.textContent
-let seconds 
 
 
 export {
     minutes,
-    seconds,
 
     florest,
     coffee,
